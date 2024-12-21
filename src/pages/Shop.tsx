@@ -26,9 +26,7 @@ const Shop = () => {
     new Set(products.map((product) => product.brand))
   );
 
-  const maxPrice = Math.max(
-    ...products.map((product) => parseFloat(product.price))
-  );
+  const maxPrice = Math.max(...products.map((product) => product.price));
 
   const filteredProducts = useMemo(() => {
     return products.filter((product) => {
@@ -40,7 +38,7 @@ const Shop = () => {
       if (filters.brands.length > 0 && !filters.brands.includes(product.brand))
         return false;
 
-      const price = parseFloat(product.price);
+      const price = product.price;
       return price >= filters.priceRange[0] && price <= filters.priceRange[1];
     });
   }, [filters.categories, filters.brands, filters.priceRange]);
