@@ -234,6 +234,28 @@ export const products: ProductsType[] = [
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit  euismod er  elitLorem ipsum dolor sit amet, consectetur adipiscing elit  euismod er  elit",
   },
+  {
+    id: 15,
+    img: "../images/miniture/chair/9.jpeg",
+    category: "High Price",
+    brand: "Indian",
+    title: "Stylish Chair",
+    short_description: "Lorem ipsum dolor",
+    price: 145.0,
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit  euismod er  elitLorem ipsum dolor sit amet, consectetur adipiscing elit  euismod er  elit",
+  },
+  {
+    id: 16,
+    img: "../images/miniture/chair/2.jpeg",
+    category: "High Price",
+    brand: "Indian",
+    title: "Stylish Chair",
+    short_description: "Lorem ipsum dolor",
+    price: 134.0,
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit  euismod er  elitLorem ipsum dolor sit amet, consectetur adipiscing elit  euismod er  elit",
+  },
 ];
 
 export const arriveItems: ArriveItemType[] = [

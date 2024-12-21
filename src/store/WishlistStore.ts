@@ -16,14 +16,14 @@ const useWishlistStore = create<WishlistStore>()(
 
           if (isExisting) {
             toast.success(`${product.title} removed from wishlist`);
-            return {
-              wishlist: state.wishlist.filter((item) => item.id !== product.id),
-            };
+            const updatedWishlist = state.wishlist.filter(
+              (item) => item.id !== product.id
+            );
+            return { wishlist: updatedWishlist };
           } else {
             toast.success(`${product.title} added to wishlist`);
-            return {
-              wishlist: [...state.wishlist, product],
-            };
+            const updatedWishlist = [...state.wishlist, product];
+            return { wishlist: updatedWishlist };
           }
         });
       },
