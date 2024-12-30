@@ -8,7 +8,7 @@ const AddToWishlist = ({ product }: { product: ProductsType }) => {
   return (
     <div
       className={`bg-white p-2 md:p-4 rounded-full cursor-pointer ${
-        isExisting ? "bg-rose-600 text-white" : ""
+        isExisting ? "bg-rose-500 text-white" : ""
       }`}
       onClick={() => toggleWishlist(product)}
     >

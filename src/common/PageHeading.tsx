@@ -12,7 +12,7 @@ const PageHeading = ({
       <img
         src="/images/miniture/page_header.jpeg"
         alt="page header"
-        className="w-full rounded-2xl"
+        className="w-full rounded-2xl h-[170px] md:h-full"
       />
       <div className="absolute top-1/2 left-28 flex items-center gap-3 text-gray-700 font-semibold text-lg">
         <Link

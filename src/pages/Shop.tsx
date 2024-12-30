@@ -8,7 +8,7 @@ import Slider from "rc-slider";
 import "rc-slider/assets/index.css";
 
 const Shop = () => {
-  const itemsPerPage = 12;
+  const itemsPerPage = 8;
   const [isModalOpen, setIsModalOpen] = useState<number | null>(null);
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -97,9 +97,9 @@ const Shop = () => {
     <>
       <PageHeading homePage="Home" page="Shop" />
       <div className="container my-20">
-        <div className="w-full grid grid-cols-5 gap-5">
+        <div className="w-full grid grid-cols-1 lg:grid-cols-5 gap-5">
           {/* Filters Section */}
-          <div className="span-1 bg-white shadow-lg p-3 sticky h-full top-5">
+          <div className="lg:span-1 bg-white shadow-lg p-3">
             <h2 className="text-2xl font-semibold mb-5">Filter</h2>
 
             {/* By Price */}
@@ -166,7 +166,7 @@ const Shop = () => {
           </div>
 
           {/* Products Section */}
-          <div className="col-span-4">
+          <div className="lg:col-span-4">
             {filteredProducts.length === 0 ? (
               <p className="text-center text-lg font-semibold">
                 No products match your criteria.

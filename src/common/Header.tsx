@@ -26,7 +26,9 @@ const Header = () => {
       }`}
     >
       <div className="container flex items-center justify-between">
-        <h1 className="text-2xl md:text-3xl font-semibold">Minitrue</h1>
+        <Link to="/" className="text-2xl md:text-3xl font-semibold">
+          Minitrue
+        </Link>
         <div className="items-center gap-5 lg:gap-10 hidden md:flex">
           {navbar.map((item) => (
             <NavLink item={item} key={item.id} />
