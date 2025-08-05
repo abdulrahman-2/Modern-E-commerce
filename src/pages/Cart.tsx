@@ -2,6 +2,7 @@ import PageHeading from "../common/PageHeading";
 import CartRow from "../common/CartRow";
 import { Link, useNavigate } from "react-router-dom";
 import useCartStore from "../store/Cartstore";
+import toast from "react-hot-toast";
 
 const Cart = () => {
   const { cart, clearCart, totalPrice } = useCartStore();
@@ -9,6 +10,11 @@ const Cart = () => {
 
   const handleCheckout = () => {
     navigate("/checkout");
+  };
+
+  const handleClearCart = () => {
+    clearCart();
+    toast.success("Cart cleared");
   };
 
   return (
@@ -37,7 +43,7 @@ const Cart = () => {
           </div>
           <div className="mt-5 w-fit ml-auto">
             <button
-              onClick={() => clearCart()}
+              onClick={() => handleClearCart()}
               className="px-4 py-2 block bg-rose-800 hover:bg-rose-600 rounded-lg cursor-pointer text-white"
             >
               Clear Cart

@@ -104,7 +104,6 @@ const CheckoutForm = () => {
 
   const handleClearCart = () => {
     clearCart();
-    toast.success("Cart cleared");
   };
 
   if (paymentSuccess) {
