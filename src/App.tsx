@@ -10,6 +10,7 @@ import Header from "./common/Header";
 import Footer from "./common/Footer";
 import { Toaster } from "react-hot-toast";
 import Wishlist from "./pages/Wishlist";
+import Checkout from "./pages/Checkout";
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/wishlist" element={<Wishlist />} />
+        <Route path="/checkout" element={<Checkout />} />
         <Route path="/shop" element={<Shop />} />
         <Route path="/contact" element={<ContactUs />} />
         <Route path="/about" element={<AboutUs />} />

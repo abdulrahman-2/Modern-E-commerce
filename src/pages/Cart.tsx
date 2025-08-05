@@ -1,10 +1,16 @@
 import PageHeading from "../common/PageHeading";
 import CartRow from "../common/CartRow";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import useCartStore from "../store/Cartstore";
 
 const Cart = () => {
   const { cart, clearCart, totalPrice } = useCartStore();
+  const navigate = useNavigate();
+
+  const handleCheckout = () => {
+    navigate("/checkout");
+  };
+
   return (
     <div>
       <PageHeading homePage="Home" page="Cart" />
@@ -51,7 +57,7 @@ const Cart = () => {
               </div>
               <div className="whitespace-nowrap flex flex-col lg:flex-row items-center gap-5 justify-between mt-5">
                 <div className="px-4 py-2 bg-secondary hover:bg-orange-300 cursor-pointer rounded-lg text-white">
-                  <button>Proceed To Checkout</button>
+                  <button onClick={handleCheckout}>Proceed To Checkout</button>
                 </div>
                 <div className="px-4 py-2 bg-rose-800 hover:bg-rose-600 rounded-lg cursor-pointer text-white">
                   <Link to={"/shop"}>Continue Shopping</Link>

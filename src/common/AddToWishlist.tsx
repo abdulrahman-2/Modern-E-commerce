@@ -7,9 +7,11 @@ const AddToWishlist = ({ product }: { product: ProductsType }) => {
   const isExisting = wishlist.some((item) => item.id === product.id);
   return (
     <div
-      className={`bg-white p-2 md:p-4 rounded-full cursor-pointer ${
-        isExisting ? "bg-rose-500 text-white" : ""
-      }`}
+      className="bg-white p-2 md:p-4 rounded-full cursor-pointer"
+      style={{
+        backgroundColor: isExisting ? "red" : "white",
+        color: isExisting ? "white" : "black",
+      }}
       onClick={() => toggleWishlist(product)}
     >
       <IoMdHeartEmpty />
