@@ -5,7 +5,7 @@ const API_URL =
 const USER_KEY = "ecommerce-user";
 
 const signup = async (userData: any) => {
-  const response = await axios.post(API_URL + "signup", userData);
+  const response = await axios.post(API_URL + "api/auth/signup", userData);
   if (response.data) {
     localStorage.setItem(USER_KEY, JSON.stringify(response.data));
   }
@@ -13,7 +13,7 @@ const signup = async (userData: any) => {
 };
 
 const signin = async (userData: any) => {
-  const response = await axios.post(API_URL + "signin", userData);
+  const response = await axios.post(API_URL + "api/auth/signin", userData);
   if (response.data) {
     localStorage.setItem(USER_KEY, JSON.stringify(response.data));
   }
