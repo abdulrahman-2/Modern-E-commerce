@@ -34,14 +34,14 @@ const CheckoutForm = () => {
     try {
       // Create a payment intent on your server
       const response = await fetch(
-        "http://localhost:4242/create-payment-intent",
+        `${import.meta.env.VITE_API_URL}/create-payment-intent`,
         {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            amount: Math.round(totalPrice() * 100), // Stripe expects amount in cents
+            amount: Math.round(totalPrice() * 100), 
             currency: "usd",
             payment_method_types: ["card"],
           }),
@@ -73,7 +73,7 @@ const CheckoutForm = () => {
           payment_method: {
             card: elements.getElement(CardElement)!,
             billing_details: {
-              name: "Customer", // You can collect this from a form
+              name: "Customer",
             },
           },
         });
