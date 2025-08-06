@@ -11,30 +11,38 @@ import Footer from "./common/Footer";
 import { Toaster } from "react-hot-toast";
 import Wishlist from "./pages/Wishlist";
 import Checkout from "./pages/Checkout";
+import SignUp from "./pages/SignUp";
+import SignIn from "./pages/SignIn";
+import { AuthProvider } from "./context/AuthContext";
 
 const App = () => {
   return (
-    <div className="min-h-[100vh] flex flex-col justify-between">
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/wishlist" element={<Wishlist />} />
-        <Route path="/checkout" element={<Checkout />} />
-        <Route path="/shop" element={<Shop />} />
-        <Route path="/contact" element={<ContactUs />} />
-        <Route path="/about" element={<AboutUs />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/*" element={<NotFoundPage />} />
-      </Routes>
-      <Footer />
-      <Toaster
-        position="top-center"
-        reverseOrder
-        toastOptions={{ duration: 2000 }}
-      />
-    </div>
+    <AuthProvider>
+      <div className="min-h-[100vh] flex flex-col justify-between">
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/wishlist" element={<Wishlist />} />
+          <Route path="/checkout" element={<Checkout />} />
+          <Route path="/shop" element={<Shop />} />
+          <Route path="/contact" element={<ContactUs />} />
+          <Route path="/about" element={<AboutUs />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/signin" element={<SignIn />} />
+          <Route path="/*" element={<NotFoundPage />} />
+        </Routes>
+        <Footer />
+        <Toaster
+          position="top-center"
+          reverseOrder
+          toastOptions={{ duration: 2000 }}
+        />
+      </div>
+    </AuthProvider>
   );
 };
 
 export default App;
+

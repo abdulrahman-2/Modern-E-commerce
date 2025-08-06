@@ -64,8 +64,10 @@ const ToggleMenu = ({ menu, isCart }: { menu?: boolean; isCart?: boolean }) => {
         />
         {menu && (
           <div className="flex flex-col items-center justify-center mt-40">
-            {navbar.map((item) => (
-              <NavLink key={item.id} item={item} setIsOpen={setIsOpen} toggle />
+            {navbar.map((item, index) => (
+              <div key={item.id}>
+                <NavLink item={item} setIsOpen={setIsOpen} toggle />
+              </div>
             ))}
           </div>
         )}
@@ -78,7 +80,7 @@ const ToggleMenu = ({ menu, isCart }: { menu?: boolean; isCart?: boolean }) => {
             {/* Cart Items */}
             <div className="flex-1 overflow-y-auto space-y-4">
               {cart.length > 0 ? (
-                cart.map((item) => (
+                cart.map((item, index) => (
                   <div
                     key={item.id}
                     className="flex items-center justify-between border-b pb-4"

@@ -6,6 +6,15 @@ import { Link } from "react-router-dom";
 import { MdOutlineChair } from "react-icons/md";
 import { IoIosArrowRoundBack, IoIosArrowRoundForward } from "react-icons/io";
 
+// Custom arrow components to handle carousel props
+const PrevArrow = (props: any) => {
+  return <IoIosArrowRoundBack {...props} />;
+};
+
+const NextArrow = (props: any) => {
+  return <IoIosArrowRoundForward {...props} />;
+};
+
 const Banner = () => {
   const settings = {
     dots: false,
@@ -15,8 +24,8 @@ const Banner = () => {
     autoplaySpeed: 6000,
     slidesToShow: 1,
     slidesToScroll: 1,
-    prevArrow: <IoIosArrowRoundBack />,
-    nextArrow: <IoIosArrowRoundForward />,
+    prevArrow: <PrevArrow />,
+    nextArrow: <NextArrow />,
   };
 
   return (

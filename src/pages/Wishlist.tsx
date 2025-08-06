@@ -4,6 +4,16 @@ import "slick-carousel/slick/slick-theme.css";
 import Heading from "../common/Heading";
 import ProductCard from "../common/ProductCard";
 import { IoIosArrowRoundBack, IoIosArrowRoundForward } from "react-icons/io";
+
+// Custom arrow components to handle carousel props
+const PrevArrow = (props: any) => {
+  return <IoIosArrowRoundBack {...props} />;
+};
+
+const NextArrow = (props: any) => {
+  return <IoIosArrowRoundForward {...props} />;
+};
+
 import useWishlistStore from "../store/WishlistStore";
 
 const Wishlist = () => {
@@ -15,8 +25,8 @@ const Wishlist = () => {
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
-    prevArrow: <IoIosArrowRoundBack />,
-    nextArrow: <IoIosArrowRoundForward />,
+    prevArrow: <PrevArrow />,
+    nextArrow: <NextArrow />,
     responsive: [
       {
         breakpoint: 1024,

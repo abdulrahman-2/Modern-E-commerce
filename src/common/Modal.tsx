@@ -49,22 +49,7 @@ const Modal = ({
               <div className="modal-info">
                 <p className="mb-2 font-bold">{data.short_description}</p>
                 <p className="text-red-600 text-xl">${data.price}</p>
-                <p className="my-2">${data.description}</p>
-
-                <div className="flex items-center mb-2">
-                  <p className="font-semibold mr-2 ">Shades: </p>
-                  <select
-                    name="shades"
-                    id="sahges"
-                    className="border border-gray-300 rounded-md p-2 focus:outline-none"
-                  >
-                    <option value="options">Choose an Options</option>
-                    <option value="options">1 Choose an Options</option>
-                    <option value="options"> 2 Choose an Options</option>
-                    <option value="options">3 Choose an Options</option>
-                    <option value="options"> 4Choose an Options</option>
-                  </select>
-                </div>
+                <p className="my-2">{data.description}</p>
                 <p className="text-green-700 m-0">In Stock 400 Items</p>
                 <div className="flex items-center mt-4">
                   <div className="flex mr-3">

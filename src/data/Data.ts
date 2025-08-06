@@ -88,7 +88,7 @@ export const products: ProductsType[] = [
     short_description: "Lorem ipsum dolor",
     price: 129.0,
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit  euismod er  elitLorem ipsum dolor sit amet, consectetur adipiscing elit  euismod er  elit",
+      "Crafted from high-quality natural wood, this chair combines rustic charm with modern comfort. Its ergonomic backrest and durable frame make it perfect for everyday dining or special occasions.",
   },
   {
     id: 2,
@@ -99,7 +99,7 @@ export const products: ProductsType[] = [
     short_description: "Lorem ipsum dolor",
     price: 1209.0,
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit  euismod er  elitLorem ipsum dolor sit amet, consectetur adipiscing elit  euismod er  elit",
+      "A timeless dining solution featuring a sleek silhouette and cushioned seat. Ideal for any table setup, this chair delivers both comfort and contemporary style.",
   },
   {
     id: 3,
@@ -110,7 +110,7 @@ export const products: ProductsType[] = [
     short_description: "Lorem ipsum dolor",
     price: 529.0,
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit  euismod er  elitLorem ipsum dolor sit amet, consectetur adipiscing elit  euismod er  elit",
+      "Designed to be the centerpiece of your room, this chair offers exceptional comfort with a refined aesthetic. Built to last, it's a perfect blend of style and substance.",
   },
   {
     id: 4,
@@ -121,7 +121,7 @@ export const products: ProductsType[] = [
     short_description: "Lorem ipsum dolor",
     price: 900.0,
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit  euismod er  elitLorem ipsum dolor sit amet, consectetur adipiscing elit  euismod er  elit",
+      "Inspired by nature, this chair showcases beautiful wood grain textures and a smooth finish. A sturdy and stylish addition to any indoor setting.",
   },
   {
     id: 5,
@@ -132,7 +132,7 @@ export const products: ProductsType[] = [
     short_description: "Lorem ipsum dolor",
     price: 129.0,
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit  euismod er  elitLorem ipsum dolor sit amet, consectetur adipiscing elit  euismod er  elit",
+      "A cozy and compact chair made for moments of relaxation. Whether reading, chatting, or lounging, it supports your posture while enhancing your decor.",
   },
   {
     id: 6,
@@ -143,9 +143,8 @@ export const products: ProductsType[] = [
     short_description: "Lorem ipsum dolor",
     price: 129.0,
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit  euismod er  elitLorem ipsum dolor sit amet, consectetur adipiscing elit  euismod er  elit",
+      "A classic pick for farmhouse or modern interiors. Made from solid wood, this dining chair offers durability and a clean design that elevates any dining room.",
   },
-
   {
     id: 7,
     img: "../images/miniture/chair/7.jpeg",
@@ -155,7 +154,7 @@ export const products: ProductsType[] = [
     short_description: "Lorem ipsum dolor",
     price: 1129.0,
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit  euismod er  elitLorem ipsum dolor sit amet, consectetur adipiscing elit  euismod er  elit",
+      "Gracefully crafted with detailed curves and a soft finish, this chair is made to impress. Perfect for stylish interiors that demand attention to detail.",
   },
   {
     id: 8,
@@ -166,7 +165,7 @@ export const products: ProductsType[] = [
     short_description: "Lorem ipsum dolor",
     price: 129.0,
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit  euismod er  elitLorem ipsum dolor sit amet, consectetur adipiscing elit  euismod er  elit",
+      "A coordinated set of chairs designed for both function and elegance. Great for families or gatherings, these chairs are lightweight, stackable, and easy to maintain.",
   },
   {
     id: 9,
@@ -177,7 +176,7 @@ export const products: ProductsType[] = [
     short_description: "Lorem ipsum dolor",
     price: 129.0,
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit  euismod er  elitLorem ipsum dolor sit amet, consectetur adipiscing elit  euismod er  elit",
+      "This chair stands out with its premium build and chic appearance. Ideal for customers looking for high-quality seating with a stylish touch.",
   },
   {
     id: 10,
@@ -188,7 +187,7 @@ export const products: ProductsType[] = [
     short_description: "Lorem ipsum dolor",
     price: 129.0,
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit  euismod er  elitLorem ipsum dolor sit amet, consectetur adipiscing elit  euismod er  elit",
+      "Simple yet effective, this versatile chair suits offices, dining rooms, or waiting areas. Designed for everyday use with a focus on durability.",
   },
   {
     id: 11,
@@ -199,7 +198,7 @@ export const products: ProductsType[] = [
     short_description: "Lorem ipsum dolor",
     price: 129.0,
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit  euismod er  elitLorem ipsum dolor sit amet, consectetur adipiscing elit  euismod er  elit",
+      "A vintage-inspired chair that adds character to any room. With aged wood tones and classic lines, it’s a nostalgic nod to timeless craftsmanship.",
   },
   {
     id: 12,
@@ -210,7 +209,7 @@ export const products: ProductsType[] = [
     short_description: "Lorem ipsum dolor",
     price: 129.0,
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit  euismod er  elitLorem ipsum dolor sit amet, consectetur adipiscing elit  euismod er  elit",
+      "Modern, minimal, and fresh—this new chair is designed for today’s living. Perfect for trendy interiors needing a clean and functional piece.",
   },
   {
     id: 13,
@@ -221,7 +220,7 @@ export const products: ProductsType[] = [
     short_description: "Lorem ipsum dolor",
     price: 129.0,
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit  euismod er  elitLorem ipsum dolor sit amet, consectetur adipiscing elit  euismod er  elit",
+      "A contemporary take from a rising brand, this chair blends innovation with comfort. Its sturdy base and stylish frame are ideal for modern homes.",
   },
   {
     id: 14,
@@ -232,7 +231,7 @@ export const products: ProductsType[] = [
     short_description: "Lorem ipsum dolor",
     price: 129.0,
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit  euismod er  elitLorem ipsum dolor sit amet, consectetur adipiscing elit  euismod er  elit",
+      "Sophistication meets comfort in this stylish chair. Upholstered in premium fabric and designed with elegance in mind, it elevates any room it graces.",
   },
   {
     id: 15,
@@ -243,7 +242,7 @@ export const products: ProductsType[] = [
     short_description: "Lorem ipsum dolor",
     price: 145.0,
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit  euismod er  elitLorem ipsum dolor sit amet, consectetur adipiscing elit  euismod er  elit",
+      "This stylish chair features a bold silhouette and a comfortable build, perfect for living spaces that embrace modern design.",
   },
   {
     id: 16,
@@ -254,7 +253,7 @@ export const products: ProductsType[] = [
     short_description: "Lorem ipsum dolor",
     price: 134.0,
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit  euismod er  elitLorem ipsum dolor sit amet, consectetur adipiscing elit  euismod er  elit",
+      "Add flair to your room with this stylish chair. Its sleek lines and smooth finish make it a standout choice for those who love clean design.",
   },
 ];
 

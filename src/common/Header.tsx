@@ -1,14 +1,32 @@
 import { navbar } from "../data/Data";
-import { HiOutlineHeart, HiOutlineUser } from "react-icons/hi";
-import { useEffect, useState } from "react";
+import { HiOutlineHeart, HiOutlineUser, HiOutlineLogout, HiOutlineChevronDown } from "react-icons/hi";
+import { useEffect, useState, useContext, useRef } from "react";
 import ToggleMenu from "./ToggleMenu";
 import NavLink from "./NavLink";
 import { Link } from "react-router-dom";
 import useWishlistStore from "../store/WishlistStore";
+import AuthContext from "../context/AuthContext";
 
 const Header = () => {
   const [sticky, setSticky] = useState<boolean>(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState<boolean>(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
   const { wishlist } = useWishlistStore();
+  const { user, logout, isAuthenticated } = useContext(AuthContext);
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setIsDropdownOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -42,7 +60,47 @@ const Header = () => {
             </span>
           </Link>
           <ToggleMenu isCart />
-          <HiOutlineUser size={25} className="cursor-pointer" />
+          <div className="relative" ref={dropdownRef}>
+            <button 
+              onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+              className="flex items-center gap-1 focus:outline-none"
+            >
+              <HiOutlineUser size={25} className="cursor-pointer" />
+              <HiOutlineChevronDown size={16} className={`transition-transform ${isDropdownOpen ? "rotate-180" : ""}`} />
+            </button>
+            <div className={`absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50 ${isDropdownOpen ? "block" : "hidden"}`}>
+              {isAuthenticated ? (
+                <>
+                  <div className="px-4 py-2 text-sm text-gray-700 border-b">
+                    <div className="font-medium">{user?.name}</div>
+                    <div className="text-gray-500 text-xs">{user?.email}</div>
+                  </div>
+                  <button
+                    onClick={logout}
+                    className="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 flex items-center"
+                  >
+                    <HiOutlineLogout className="mr-2" />
+                    Logout
+                  </button>
+                </>
+              ) : (
+                <>
+                  <Link
+                    to="/signin"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                  >
+                    Sign In
+                  </Link>
+                  <Link
+                    to="/signup"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                  >
+                    Sign Up
+                  </Link>
+                </>
+              )}
+            </div>
+          </div>
           <div className="md:hidden">
             <ToggleMenu menu />
           </div>
@@ -53,3 +111,4 @@ const Header = () => {
 };
 
 export default Header;
+

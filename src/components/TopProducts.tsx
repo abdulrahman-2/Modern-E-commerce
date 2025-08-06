@@ -6,6 +6,15 @@ import { products } from "../data/Data";
 import ProductCard from "../common/ProductCard";
 import { IoIosArrowRoundBack, IoIosArrowRoundForward } from "react-icons/io";
 
+// Custom arrow components to handle carousel props
+const PrevArrow = (props: any) => {
+  return <IoIosArrowRoundBack {...props} />;
+};
+
+const NextArrow = (props: any) => {
+  return <IoIosArrowRoundForward {...props} />;
+};
+
 const TopProducts = () => {
   const settings = {
     dots: false,
@@ -15,8 +24,8 @@ const TopProducts = () => {
     autoplaySpeed: 6000,
     slidesToShow: 4,
     slidesToScroll: 1,
-    prevArrow: <IoIosArrowRoundBack />,
-    nextArrow: <IoIosArrowRoundForward />,
+    prevArrow: <PrevArrow />,
+    nextArrow: <NextArrow />,
     responsive: [
       {
         breakpoint: 1024,
