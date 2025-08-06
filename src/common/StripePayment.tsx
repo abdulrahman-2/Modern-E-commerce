@@ -34,7 +34,7 @@ const CheckoutForm = () => {
     try {
       // Create a payment intent on your server
       const response = await fetch(
-        `${import.meta.env.VITE_API_URL}/create-payment-intent`,
+        `${import.meta.env.VITE_API_URL}create-payment-intent`,
         {
           method: "POST",
           headers: {
