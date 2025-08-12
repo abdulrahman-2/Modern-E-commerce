@@ -63,7 +63,7 @@ const ToggleMenu = ({ menu, isCart }: { menu?: boolean; isCart?: boolean }) => {
           className="cursor-pointer absolute top-4 left-4"
         />
         {menu && (
-          <div className="flex flex-col items-center justify-center mt-40">
+          <div className="flex flex-col items-center justify-center mt-40 gap-6">
             {navbar.map((item) => (
               <div key={item.id}>
                 <NavLink item={item} setIsOpen={setIsOpen} toggle />
